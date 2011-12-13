@@ -14,17 +14,10 @@
 <script src="jquery.mentions.js"></script>
 <script>
 
-	function highlight(){
-		$('p').mentions({
-			foundMention:function(text){
-				
-			}
-		});
-	}
-
 	$('p').filter(':first').html('guess #what');
 
-	setTimeout(highlight(),1000);
+	$('p').mentions();
+
 
 </script>
 </body>
