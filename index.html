@@ -1,0 +1,31 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title>Mentions test</title>
+</head>
+<body>
+	
+<p>Hey there</p>
+
+<p>You #there @me is now @you</p>
+
+<script src="http://code.jquery.com/jquery.min.js"></script>
+<script src="jquery.mentions.js"></script>
+<script>
+
+	function highlight(){
+		$('p').mentions({
+			foundMention:function(text){
+				
+			}
+		});
+	}
+
+	$('p').filter(':first').html('guess #what');
+
+	setTimeout(highlight(),1000);
+
+</script>
+</body>
+</html>
